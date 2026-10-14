@@ -8,7 +8,7 @@ The template is a working extension in its own right: it translates "key = value
 
 ## Step 1: create the project
 
-On GitHub, click "Use this template" to create your own repository, then clone it. Without GitHub, run `translator-sidecar adapter new <id>` to create the same files in the current folder.
+On GitHub, click "Use this template" to create your own repository, then clone it. Without GitHub, run `translator-sidecar adapter new <id>` to create the same files in an `<id>` folder under the current folder.
 
 `translator-sidecar` is the command line that ships with Translator:
 
@@ -37,7 +37,7 @@ translator-sidecar adapter test .
 
 This checks the manifest and the code, then runs extraction and writing on `samples/` in a separate process: written back with the source as the translation, the file must give the same text when extracted again. It exits with 0 when everything passes.
 
-Then, on Translator's Extensions page, click "Add extension…" and choose this folder (or run `translator-sidecar adapter install . --yes`). Once the new type appears in the sidebar, translate a real file to see the result. After changing the code, add it again to update it.
+Then, on Translator's Extensions page, click "Add from folder…" and choose this folder (or run `translator-sidecar adapter install . --yes`). Once the new type appears in the sidebar, translate a real file to see the result. After changing the code, add it again to update it.
 
 ## Share it
 

@@ -44,7 +44,7 @@ def scan(path: str) -> ScanItem: ...  # 可省，省略时按 extract 计数
 - 不该翻译、但要留在原位的片段（占位符、行内代码、链接地址）放进 `protected`，必须是 `text` 的子串；整段不该翻译的设 `locked=True`。
 - `write` 只读 `path`，写到 `out_path`；每段写 `unit.translation`（没译成的、`locked` 的就是原文）；文字以外的内容（结构、格式、编码、换行符）尽量逐字节保留。`bilingual` 时同时写原文和译文，写法由格式决定。
 - 时限：`scan` 每个文件 30 秒，`extract`、`write` 每个文件 120 秒，超时 Translator 会结束进程，这个文件记为失败。
-- 扩展在单独的进程里运行，工作目录是临时目录，拿不到 Translator 的数据目录和任何密钥。`print` 的内容进 Translator 的日志，可以用来调试。
+- 扩展在单独的进程里运行，工作目录是临时目录，Translator 不会把数据目录或任何密钥交给它。`print` 的内容进 Translator 的日志，可以用来调试。
 
 ## 限制（安装前检查，违反就装不上）
 

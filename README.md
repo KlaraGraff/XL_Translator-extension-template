@@ -8,7 +8,7 @@
 
 ## 第一步：建立项目
 
-在 GitHub 上点「Use this template」建一个自己的仓库，再克隆到本机。不用 GitHub 时，运行 `translator-sidecar adapter new <id>`，在当前目录生成同样的文件。
+在 GitHub 上点「Use this template」建一个自己的仓库，再克隆到本机。不用 GitHub 时，运行 `translator-sidecar adapter new <id>`，在当前目录下的 `<id>` 文件夹里生成同样的文件。
 
 `translator-sidecar` 是 Translator 自带的命令行，位置是：
 
@@ -37,7 +37,7 @@ translator-sidecar adapter test .
 
 它检查清单和代码，再在单独的进程里用 `samples/` 跑一遍取字和写回：以原文作译文写回后，再取一次字应与原文一致。全部通过时退出码为 0。
 
-然后在 Translator 的「扩展」页点「添加扩展…」，选这个文件夹（或运行 `translator-sidecar adapter install . --yes`）。侧栏出现新类型后，翻译一份真实文件看看效果。改了代码后再添加一次即可更新。
+然后在 Translator 的「扩展」页点「从文件夹添加…」，选这个文件夹（或运行 `translator-sidecar adapter install . --yes`）。侧栏出现新类型后，翻译一份真实文件看看效果。改了代码后再添加一次即可更新。
 
 ## 分享
 
